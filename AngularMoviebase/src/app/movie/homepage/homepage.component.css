@@ -1,0 +1,26 @@
+.nav-link {
+    font-size: 110%;
+    font-family: RobotoRegular;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.router-link-active {
+    border-bottom: 2px solid black;
+}
+
+.usernameClass {
+    font-weight: 600;
+    color: black;
+}
+
+.usernameClass:hover {
+    font-weight: 600;
+    border-bottom: none;
+    cursor: text;
+}

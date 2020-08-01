@@ -1,0 +1,38 @@
+<div class="container d-flex align-items-center h-100">
+  <div class="container">
+    <div class="row justify-content-center text-center align-items-center">
+      <div class="col-lg-6 col-md-12">
+        <h1 class="mat-display-4 appName primaryFont">Moviebase</h1>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <h1 class="mat-display-2 accentFont">LOGIN</h1>
+
+        <form [formGroup]="form" (ngSubmit)="UserLoginSubmit()">
+
+          <!-- Username -->
+          <mat-form-field appearance='legacy' floatLabel='always'>
+            <mat-label class="accentFont">Username</mat-label>
+            <input matInput placeholder="Username" type="text" name="username" required formControlName="username">
+            <mat-error *ngIf="usernameControl.invalid && usernameControl.touched">
+              <span *ngIf="usernameControl.errors?.required">Required</span>
+            </mat-error>
+          </mat-form-field>
+          <br>
+
+          <!-- Password -->
+          <mat-form-field appearance='legacy' floatLabel='always'>
+            <mat-label class="accentFont">Password</mat-label>
+            <input matInput placeholder="Username" type="password" name="password" required formControlName="password">
+            <mat-error *ngIf="passwordControl.invalid && passwordControl.touched">
+              <span *ngIf="passwordControl.errors?.required">Required</span>
+            </mat-error>
+          </mat-form-field>
+          <br>
+          <button mat-raised-button color='primary' type="submit" class="mb-2" [class.disabledButton]="usernameControl.errors || passwordControl.errors">LOGIN</button>
+          <br>
+          <p class="accentFont">Not a user yet? <a [routerLink]="['/register']" class="primaryFont" >Register</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

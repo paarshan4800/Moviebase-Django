@@ -1,0 +1,14 @@
+.moviePoster {
+  width: 200px;
+  height: 300px;
+}
+
+.movieGrid {
+    transition: box-shadow .3s;
+    border-radius: 5%;
+}
+
+.movieGrid:hover {
+  box-shadow: 0 0 20px rgba(0, 184, 212, 1);
+  cursor: pointer;
+}

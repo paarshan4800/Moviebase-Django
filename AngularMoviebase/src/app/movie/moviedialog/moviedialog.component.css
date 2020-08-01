@@ -1,0 +1,12 @@
+.moviePoster {
+  width: 200px;
+  height: 300px;
+}
+
+td {
+  padding: 2%;
+}
+
+.tableTitle {
+  font-size: 125%;
+}

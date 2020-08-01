@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-md primaryBackground">
+  <!-- Brand -->
+  <a class="navbar-brand appName blackFont" [routerLink]="['search']" >Moviebase</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link blackFont mr-2 usernameClass">Hi, {{username}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link blackFont mr-2" [routerLink]="['search']" routerLinkActive="router-link-active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link blackFont mr-2" [routerLink]="['likedmovies']" routerLinkActive="router-link-active">Liked
+          Movies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link blackFont mr-2" [routerLink]="['movieboard']" routerLinkActive="router-link-active">Movieboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link blackFont mr-2" (click)="Logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

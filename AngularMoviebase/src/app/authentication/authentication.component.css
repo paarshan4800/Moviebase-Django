@@ -1,0 +1,29 @@
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #00B8D4 !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #00B8D4 !important;
+  ;
+}
+
+input {
+  color: white;
+}
+
+mat-form-field {
+    margin: 2%;
+    font-size: 125%;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.disabledButton {
+  pointer-events: none;
+  background-color: grey;
+}

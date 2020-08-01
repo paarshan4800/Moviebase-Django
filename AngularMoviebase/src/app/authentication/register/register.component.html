@@ -1,0 +1,65 @@
+<div class="container d-flex align-items-center h-100">
+  <div class="container">
+    <div class="col-md-12">
+    </div>
+    <div class="row justify-content-center text-center align-items-center">
+      <div class="col-lg-6 col-md-12">
+        <h1 class="mat-display-4 appName primaryFont">Moviebase</h1>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <h1 class="mat-display-2 accentFont">REGISTRATION</h1>
+        <form [formGroup]="form" (ngSubmit)="UserRegisterSubmit()">
+
+          <!-- Username -->
+          <mat-form-field appearance='legacy' floatLabel='always'>
+            <mat-label class="accentFont">Username</mat-label>
+            <input matInput placeholder="Username" type="text" name="username" required formControlName="username">
+            <mat-error *ngIf="usernameControl.invalid && usernameControl.touched">
+              <span *ngIf="usernameControl.errors?.required">Required</span>
+              <span *ngIf="usernameControl.errors?.minlength">Minimum 8 characters</span>
+            </mat-error>
+          </mat-form-field>
+          <br>
+
+          <!-- Email -->
+          <mat-form-field appearance='legacy' floatLabel='always'>
+            <mat-label class="accentFont">Email</mat-label>
+            <input matInput placeholder="Email" type="email" name="email" required formControlName="email">
+            <mat-error *ngIf="emailControl.invalid && emailControl.touched">
+              <span *ngIf="emailControl.errors?.required">Required</span>
+              <span *ngIf="emailControl.errors?.email || emailControl.errors?.pattern">Provide valid email</span>
+            </mat-error>
+          </mat-form-field>
+          <br>
+
+          <!-- Password -->
+          <mat-form-field appearance='legacy' floatLabel='always'>
+            <mat-label class="accentFont">Password</mat-label>
+            <input matInput placeholder="Password" type="password" name="password" required
+              formControlName="password">
+            <mat-error *ngIf="passwordControl.invalid && passwordControl.touched">
+              <span *ngIf="passwordControl.errors?.required">Required</span>
+              <span *ngIf="passwordControl.errors?.minlength">Minimum 8 characters</span>
+            </mat-error>
+          </mat-form-field>
+          <br>
+
+          <!-- Password2 -->
+          <mat-form-field appearance='legacy' floatLabel='always'>
+            <mat-label class="accentFont">Confirm Password</mat-label>
+            <input matInput placeholder="Confirm Password" type="password" name="password2" required
+              formControlName="password2">
+          </mat-form-field>
+          <mat-error *ngIf="!PasswordsMatch">
+            <span>Passwords not matching</span>
+          </mat-error>
+          <br>
+          <button mat-raised-button color='primary' type="submit" class="mb-2"
+            [class.disabledButton]="usernameControl.errors || emailControl.errors || passwordControl.errors || password2Control.errors">REGISTER</button>
+          <br>
+          <p class="accentFont">Already a user? <a [routerLink]="['/login']" class="primaryFont">Login</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

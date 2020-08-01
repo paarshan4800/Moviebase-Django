@@ -1,0 +1,9 @@
+hr {
+    width: 50%;
+}
+
+.heading {
+    font-size: 200%;
+    letter-spacing: 1px;
+    font-weight: 200 !important;
+}

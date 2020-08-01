@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+  font-family: AppName;
+  src: url(./assets/fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+.appName {
+  font-family: AppName !important;
+  letter-spacing: 1px;
+  font-size: 150%;
+}
+
+.accentFont {
+  color: #fafafa;
+}
+
+.primaryFont {
+  color: #00B8D4;
+
+}
+
+.warnFont {
+  color: red;
+}
+
+.blackFont {
+  color: black !important;
+}
+
+.accentBackground {
+  background-color: #fafafa;
+}
+
+.primaryBackground {
+  background-color: #00B8D4;
+}
+
+.warnBackground {
+  background-color: red;
+}
+
+.dialogBG {
+  background-color: #e6e6e6;
+  opacity: 0.2 !important;
+
+}
+
+mat-dialog-container {
+  background-color: black !important;
+}
